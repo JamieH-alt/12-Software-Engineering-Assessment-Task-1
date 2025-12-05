@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <!-- Again no stylesheet here but just good practice-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registered Details</h2>
+        <!-- These are just set up for empty spans to be set on page load with the variables set in script.js (on form submit) -->
+        <p><strong>Name:</strong> <span id="display-name"></span></p>
+        <p><strong>Email:</strong> <span id="display-email"></span></p>
+        <p><strong>Date of Birth:</strong> <span id="display-dob"></span></p>
+        <p><strong>Passowrd: </strong> <span id="display-password"></span></p>
+    </div>
+    <script>
+        // This code has been done here for sake of simplicity (Its only a small bit of code)
+        // This event gets the web page AS SOON as its loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // All this code just sets the span tags to have their text content be the sessionStorage variable of that detail (saved in script.js on submit)
+            document.getElementById('display-name').textContent = sessionStorage.getItem('userName');
+            document.getElementById('display-email').textContent = sessionStorage.getItem('userEmail');
+            document.getElementById('display-dob').textContent = sessionStorage.getItem('userDob');
+            document.getElementById('display-password').textContent = sessionStorage.getItem('userPassword');
+        });
+    </script>
+</body>
+</html>
