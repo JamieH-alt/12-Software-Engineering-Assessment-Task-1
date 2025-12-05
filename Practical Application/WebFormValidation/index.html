@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Validation Form</title> 
+    <!-- There is no stylesheet but this is just generic good practice.-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <!-- This is just a basic HTML form, with an input tag for every input -->
+        <!-- The classes on divs are just for CSS and good practice sake -->
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <!-- The required tag on this (and all other inputs) makes the browser force you to input-->
+                <input type="text" id="name" name="name" required> 
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <!-- The minlength variable makes it so that the password HAS TO BE atleast 8 characters before the form is complete-->
+                <input type="password" id="password" name="password" required minlength="8">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <!-- This connects the script.js (Just another way of doing as opposed to putting it in the header.)-->
+    <script src="script.js"></script>
+</body>
+</html>
